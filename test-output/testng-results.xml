@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-06T19:23:41 IST" name="Default suite" finished-at="2022-05-06T19:23:49 IST" duration-ms="8638">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runnerClass.runner@4550bb58]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2022-05-06T19:23:41 IST" name="Default test" finished-at="2022-05-06T19:23:49 IST" duration-ms="8638">
+      <class name="runnerClass.runner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runnerClass.runner@4550bb58]" started-at="2022-05-06T19:23:41 IST" name="setUpClass" finished-at="2022-05-06T19:23:41 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30b975ad]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runnerClass.runner@4550bb58]" started-at="2022-05-06T19:23:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-06T19:23:49 IST" duration-ms="8357" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verification login success (Postive case)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Validation of login]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to find element with locator By.id: username
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'JD14', ip: '192.168.121.93', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: username
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'JD14', ip: '192.168.121.93', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+at Wrapper.Wrapperclass.locateElement(Wrapperclass.java:31)
+at stepDefinition.Login.enterUsername(Login.java:23)
+at ✽.Enter Username(file:///D:/cucumberFramwork/src/test/java/features/Login.feature:6)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runnerClass.runner@4550bb58]" started-at="2022-05-06T19:23:49 IST" name="tearDownClass" finished-at="2022-05-06T19:23:49 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runnerClass.runner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
