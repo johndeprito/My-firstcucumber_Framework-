@@ -13,12 +13,13 @@ Background:
     And Enter the firstName
     And Enter the mid name
     And Enter the familyname
-    #And If need unidentified patient can select or leave it
+    And Click the next
     Then Select the gender
+    And Click the next button 
     And Enter the patient Date of Birth date
     And Select month
     Then Enter the year of Date of Birth
-    And Click next 
+    And Click the next button1 
    
    	 And Enter the valid Address1
    	 And Enter the Address2
@@ -26,18 +27,24 @@ Background:
    	 And Enter the state
    	 And Enter the Country
    	 And Enter the Postal Code
+   	 And Click to the next
    	 And Enter the Valid patient phone number
+   	 And CLick next
    	 
    	 And Select any one given relationship type in dropdown
    	 Then Enter the person name
-   	 #And If you need add more relations can click add(+)
+   	 And CLick next for submit
+   	
    	 
-   	 Given Click the Confirm button
+   	 And Click the Confirm button
+   	 And Validate the patient Name
+   	 
+   	  #And If you need add more relations can click add(+)
    	 
    	 
-   	 Scenario Outline: Enter the patient detail in Demographics
-   	 Given Click the "<Register a patient>"
+   	 #Scenario Outline: Enter the patient detail in Demographics
+   	 #Given Click the "<Register a patient>"
    	 
-   	 
-   	 Examples:
-   	 |||
+   	 #And If need unidentified patient can select or leave it
+   	 #Examples:
+   	# |||
