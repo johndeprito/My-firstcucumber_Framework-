@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -17,8 +18,8 @@ public class RegisterpatientMRS extends Wrapperclass {
 		WebElement reg = locateElement("linkText", Register);
 		reg.click();
 	}
-	
-	// Enter the first name  
+
+	// Enter the first name
 	@And("Enter the firstName")
 	public void fName() {
 		WebElement gname = locateElement("xpath", "//input[@name = 'givenName']");
@@ -40,19 +41,20 @@ public class RegisterpatientMRS extends Wrapperclass {
 	}
 
 	// Enter the last_name
-	/*
-	 * @And("nxt btn") public void nxtbtn() { WebElement nxt = locateElement("id",
-	 * "next-button"); nxt.click();
-	 }*/
 
-	
+	@And("Click the next")
+	public void nxtbtn() {
+		WebElement nxt = locateElement("id", "next-button");
+		nxt.click();
+	}
+
 	// drop-down select in gender
 	@Then("Select the gender")
-	
+
 	public void generation() {
 		WebElement gen = locateElement("id", "gender-field");
 		Select genderSelection = new Select(gen);
-		genderSelection.selectByValue("M");
+		genderSelection.selectByValue("F");
 	}
 
 	// click the next
@@ -64,14 +66,14 @@ public class RegisterpatientMRS extends Wrapperclass {
 
 	// Birthday
 	@And("Enter the patient Date of Birth date")
-	public void bdy() {
+	public void birthday() {
 		WebElement day = locateElement("id", "birthdateDay-field");
-		day.sendKeys("14");
+		day.sendKeys("14", Keys.TAB);
 	}
 
 	// Born month select
-	@And("Select a month")
-	public void bmnth() {
+	@And("Select month")
+	public void birthmonth() {
 		WebElement mnts = locateElement("name", "birthdateMonth");
 		Select monthsSelection = new Select(mnts);
 		monthsSelection.selectByVisibleText("October");
@@ -85,10 +87,13 @@ public class RegisterpatientMRS extends Wrapperclass {
 	}
 
 	// Go to the next step
-	/*
-	 * @And("Click the next button") public void next() { WebElement nxt =
-	 * locateElement("id", "next-button"); nxt.click(); }
-	 */
+
+	@And("Click the next button1")
+	public void next() {
+		WebElement nxt = locateElement("id", "next-button");
+		nxt.click();
+	}
+
 	// Enter the valid Address
 	@And("Enter the valid Address1")
 	public void address() {
@@ -113,8 +118,8 @@ public class RegisterpatientMRS extends Wrapperclass {
 	// Enter the state
 	@And("Enter the state")
 	public void stateName() {
-		WebElement ste = locateElement("id", "cityVillage");
-		ste.sendKeys("Cny");
+		WebElement ste = locateElement("id", "stateProvince");
+		ste.sendKeys("Puducherry");
 	}
 
 	// Enter the country
@@ -168,6 +173,13 @@ public class RegisterpatientMRS extends Wrapperclass {
 		abc.sendKeys("Father");
 	}
 
+	// click the next button
+	@And("CLick next for submit")
+	public void Fnext() {
+		WebElement Next = locateElement("id", "next-button");
+		Next.click();
+	}
+
 	// click the confirm
 	@And("Click the Confirm button")
 	public void confirm() {
@@ -176,9 +188,9 @@ public class RegisterpatientMRS extends Wrapperclass {
 	}
 
 	// verify the givenName
-	@And("Validate the given Name")
+	@And("Validate the patient Name")
 	public void validateUname() {
 		String val = locateElement("xpath", "//span[contains(@class,'PersonName-givenName')]").getText();
-		Assert.assertTrue(val.contains("JD"));
+		Assert.assertTrue(val.contains("JP"));
 	}
 }
