@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\reojo\AppData\Local\Temp\testng-eclipse-789680891\testng-customsuite.xml</span>
+                    <span>C:\Users\reojo\AppData\Local\Temp\testng-eclipse-2051852430\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="runnerClass.runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verification login success (Postive case)&quot;, &quot;Optional[Validation of login]&quot;)">runScenario("Verification login success (Postive case)", "Optional[Validation of login]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="runnerClass.runner" class="method navigator-link" hash-for-method="runScenario(&quot;Enter the patient detail in Demographics&quot;, &quot;Optional[Feed to data in Register patient]&quot;)">runScenario("Enter the patient detail in Demographics", "Optional[Feed to data in Register patient]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -127,22 +127,35 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verification login success (Postive case)&quot;, &quot;Optional[Validation of login]&quot;)">
-                  </a> <!-- runScenario("Verification login success (Postive case)", "Optional[Validation of login]") -->
+                  <a name="runScenario(&quot;Enter the patient detail in Demographics&quot;, &quot;Optional[Feed to data in Register patient]&quot;)">
+                  </a> <!-- runScenario("Enter the patient detail in Demographics", "Optional[Feed to data in Register patient]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verification login success (Postive case)", "Optional[Validation of login]")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: username
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+                  <span class="parameters">("Enter the patient detail in Demographics", "Optional[Feed to data in Register patient]")</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;JD14&apos;, ip: &apos;192.168.121.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at Wrapper.Wrapperclass.locateElement(Wrapperclass.java:31)
-	at stepDefinition.Login.enterUsername(Login.java:23)
-	at ✽.Enter Username(file:///D:/cucumberFramwork/src/test/java/features/Login.feature:6)
+System info: host: &apos;JD14&apos;, ip: &apos;192.168.151.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57d74eb399a94a23b21dbe33a8f3ea64, sendKeysToElement {id=4a9984cd-6fba-49f5-920d-0b028a544a11, value=[Ljava.lang.CharSequence;@5c723f2d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\reojo\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56495/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57d74eb399a94a23b21dbe33a8f3ea64)] -&gt; id: birthdateDay-field]
+Session ID: 57d74eb399a94a23b21dbe33a8f3ea64
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at stepDefinition.RegisterpatientMRS.bdy(RegisterpatientMRS.java:68)
+	at ✽.Enter the patient Date of Birth date(file:///D:/cucumberFramwork/src/test/java/features/RegisterpatientMRS.feature:18)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -154,7 +167,7 @@ Driver info: driver.version: RemoteWebDriver
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\reojo\AppData\Local\Temp\testng-eclipse-789680891\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\reojo\AppData\Local\Temp\testng-eclipse-2051852430\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -215,12 +228,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runnerClass.runner')
-data.setCell(0, 3, 8357);
+data.setCell(0, 3, 41704);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -248,18 +261,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runnerClass.runner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@30b975ad)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@6c6017b9)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Verification login success (Postive case)", "Optional[Validation of login]")</span>
-                <span class="method-start">246 ms</span>
+                <span class="method-name">runScenario("Enter the patient detail in Demographics", "Optional[Feed to data in Register patient]")</span>
+                <span class="method-start">432 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">8608 ms</span>
+                <span class="method-start">42146 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

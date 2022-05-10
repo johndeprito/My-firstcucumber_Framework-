@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Wrapperclass implements WwrapperInterface {
-	public RemoteWebDriver driver;
+	public static RemoteWebDriver driver;
 
 	public void openBrowser(String url) {
 		WebDriverManager.chromedriver().setup();
@@ -35,7 +35,7 @@ public class Wrapperclass implements WwrapperInterface {
 			return driver.findElement(By.linkText(locatorVal));
 		case "partialLinkText":
 			return driver.findElement(By.partialLinkText(locatorVal));
-		case "Xpath":
+		case "xpath":
 			return driver.findElement(By.xpath(locatorVal));
 		case "css":
 			return driver.findElement(By.cssSelector(locatorVal));
@@ -73,10 +73,10 @@ public class Wrapperclass implements WwrapperInterface {
 
 	}
 	
-	public void elementSelectByValue(WebElement element, String value) {
+	/*public void elementSelectByValue(WebElement element, String value) {
 
 	Select drp = new Select(element);
 	drp.selectByValue(value);
-	
+	*/
 }
-}
+

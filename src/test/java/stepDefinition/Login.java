@@ -2,6 +2,7 @@ package stepDefinition;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import java.io.IOException;
 
 import Wrapper.Wrapperclass;
 import io.cucumber.java.en.And;
@@ -17,22 +18,20 @@ public class Login extends Wrapperclass {
 		openBrowser("https://demo.openmrs.org/openmrs/login.htm");
 
 	}
-
-	@Then("Enter Username")
-	public void enterUsername() {
+	@Then("Enter {string} in username")
+	public void enterUsername(String userName) {
 		WebElement uName = locateElement("id", "username");
-		uName.sendKeys("Admin");
-
+		uName.sendKeys(userName);
 	}
 
-	@And("Enter Password")
-	public void enterPassword() {
-		WebElement pswd = locateElement("id", "password");
-		pswd.sendKeys("Admin123");
+	@And("Enter {string} in password")
+	public void enterPassword(String password) {
+		WebElement passcode = locateElement("id", "password");
+		passcode.sendKeys(password);
 	}
 
-	@And("Select the isolation ward")
-	public void clickWard() {
+	@And("Select the {string}")
+	public void clickWard(String ward) {
 		WebElement wardType = locateElement("id", "Isolation Ward");
 		wardType.click();
 	}
@@ -42,33 +41,46 @@ public class Login extends Wrapperclass {
 		WebElement login = locateElement("id", "loginButton");
 		login.click();
 	}
-		//need to validate login success or not
-	@And("Then validate login is success")
-	public void validateadmin() {
-		String val = locateElement("xpath", "//div[@id='content']//h4").getText();
-		Assert.assertTrue(val.contains("Super User (admin)"));
-	}
-		
-		
+
+	// need to validate login success or not
 	/*
-	 * //Negative Scenario
-	 * 
-	 * @Then("Invalid Username") public void invalidUsername() { WebElement
-	 * InvalidUserName = locateElement("id","username");
-	 * InvalidUserName.sendKeys("ADMIN");
-	 * 
-	 * }
-	 * 
-	 * @And("Enter the Password") public void password() { WebElement pswd =
-	 * locateElement("id", "password"); pswd.sendKeys("admin123"); }
-	 * 
-	 * @And("Click the Isolation ward") public void Isolationward() { WebElement
-	 * Iswrd = locateElement("id","Isolation Ward" ); Iswrd.click(); } public void
-	 * login1() { WebElement log1 = locateElement("id", "loginButton");
-	 * log1.click();
-	 * 
-	 * }
+	 * @Then("Validate login is success") public void validateadmin() { String val =
+	 * locateElement("xpath", "//div[@id='content']//h4").getText();
+	 * Assert.assertTrue(val.contains("Super User (admin)")); }
 	 */
+
+	// Negative Scenario
+
+	@Then("Enter the Invalid Username")
+	public void invalidUsername() {
+		WebElement InvalidUserName = locateElement("id", "username");
+		InvalidUserName.sendKeys("ADMIN");
+
 	}
 
+	@And("Enter the Invalid Password")
+	public void password() {
+		WebElement pswd = locateElement("id", "password");
+		pswd.sendKeys("admin123");
+	}
 
+	@And("select the Isolation ward")
+	public void Isolationward() {
+		WebElement Iswrd = locateElement("id", "Isolation Ward");
+		Iswrd.click();
+	}
+
+	@And("click the login")
+	public void login1() {
+		WebElement log1 = locateElement("id", "loginButton");
+		log1.click();
+		
+	}
+	/*
+	 * @Then("verify error message is getting displayed") public void errmessage() {
+	 * String errmessage =
+	 * locateElement("xpath","//i[@class='icon-exclamation-sign']").getText();
+	 * Assert.assertTrue(errmessage.contains("Invalid username/password")); }
+	 */
+
+}

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 06 19:23:41 IST 2022</td>
+<td>Started on:</td><td>Tue May 10 09:19:46 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8638 ms)</td>
+<tr><td>Total time:</td><td>42 seconds (42182 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,34 +75,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runnerClass.runner.runScenario()'><b>runScenario</b><br>Test class: runnerClass.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verification login success (Postive case)", "Optional[Validation of login]"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: username
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+<td title='runnerClass.runner.runScenario()'><b>runScenario</b><br>Test class: runnerClass.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Enter the patient detail in Demographics", "Optional[Feed to data in Register patient]"</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;JD14&apos;, ip: &apos;192.168.121.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at Wrapper.Wrapperclass.locateElement(Wrapperclass.java:31)
-	at stepDefinition.Login.enterUsername(Login.java:23)
-	at ?.Enter Username(file:///D:/cucumberFramwork/src/test/java/features/Login.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace386478079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace386478079'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.id: username
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+System info: host: &apos;JD14&apos;, ip: &apos;192.168.151.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57d74eb399a94a23b21dbe33a8f3ea64, sendKeysToElement {id=4a9984cd-6fba-49f5-920d-0b028a544a11, value=[Ljava.lang.CharSequence;@5c723f2d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\reojo\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56495/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57d74eb399a94a23b21dbe33a8f3ea64)] -&gt; id: birthdateDay-field]
+Session ID: 57d74eb399a94a23b21dbe33a8f3ea64
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at stepDefinition.RegisterpatientMRS.bdy(RegisterpatientMRS.java:68)
+	at ?.Enter the patient Date of Birth date(file:///D:/cucumberFramwork/src/test/java/features/RegisterpatientMRS.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace717132147", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace717132147'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=101.0.4951.54)
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;JD14&apos;, ip: &apos;192.168.121.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at Wrapper.Wrapperclass.locateElement(Wrapperclass.java:31)
-	at stepDefinition.Login.enterUsername(Login.java:23)
-	at ?.Enter Username(file:///D:/cucumberFramwork/src/test/java/features/Login.feature:6)
+System info: host: &apos;JD14&apos;, ip: &apos;192.168.151.93&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [57d74eb399a94a23b21dbe33a8f3ea64, sendKeysToElement {id=4a9984cd-6fba-49f5-920d-0b028a544a11, value=[Ljava.lang.CharSequence;@5c723f2d}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\reojo\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56495}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56495/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (57d74eb399a94a23b21dbe33a8f3ea64)] -&gt; id: birthdateDay-field]
+Session ID: 57d74eb399a94a23b21dbe33a8f3ea64
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:107)
+	at stepDefinition.RegisterpatientMRS.bdy(RegisterpatientMRS.java:68)
+	at ?.Enter the patient Date of Birth date(file:///D:/cucumberFramwork/src/test/java/features/RegisterpatientMRS.feature:18)
 </pre></div></td>
-<td>8</td>
+<td>41</td>
 <td>runnerClass.runner@4550bb58</td></tr>
 </table><p>
 </body>
