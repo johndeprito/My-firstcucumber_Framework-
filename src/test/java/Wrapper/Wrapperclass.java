@@ -39,6 +39,8 @@ public class Wrapperclass implements WwrapperInterface {
 			return driver.findElement(By.xpath(locatorVal));
 		case "css":
 			return driver.findElement(By.cssSelector(locatorVal));
+		case "name":
+			return driver.findElement(By.name(locatorVal));
 		}
 
 		// TODO Auto-generated method stub
