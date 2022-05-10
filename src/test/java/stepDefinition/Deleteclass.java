@@ -8,9 +8,9 @@ import io.cucumber.java.en.Given;
 
 public class Deleteclass extends Wrapperclass {
 	//click the Delete button
-	@Given("Delete the pateint")
+	@Given("Click the Delete patient link")
 	public void delete() {
-		WebElement deleteR = locateElement("xpath", "//div[contains(@class,'col-11 col-lg-10')])[8]");
+		WebElement deleteR = locateElement("xpath", "(//div[contains(@class,'col-11 col-lg-10')])[8]");
 		deleteR.click();
 	}
 	//mention the reason for delete
