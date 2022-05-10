@@ -191,6 +191,6 @@ public class RegisterpatientMRS extends Wrapperclass {
 	@And("Validate the patient Name")
 	public void validateUname() {
 		String val = locateElement("xpath", "//span[contains(@class,'PersonName-givenName')]").getText();
-		Assert.assertTrue(val.contains("JP"));
+		Assert.assertTrue(val.contains("JD"));
 	}
 }
